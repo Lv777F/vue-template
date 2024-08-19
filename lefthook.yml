@@ -1,0 +1,8 @@
+pre-commit:
+  commands:
+    lint:
+      run: npx eslint {staged_files} --fix
+      glob: '*.{vue,js,jsx,ts,tsx}'
+    format:
+      run: npx prettier {staged_files} --write
+      glob: '*.{vue,js,jsx,ts,tsx}'
