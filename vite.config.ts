@@ -11,12 +11,19 @@ import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import ElementPlus from 'unplugin-element-plus/vite'
+import { viteMockServe } from 'vite-plugin-mock'
+import Layouts from 'vite-plugin-vue-layouts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     VueRouter(),
     Vue(),
+    Layouts(),
+    viteMockServe({
+      mockPath: 'mock',
+      enable: process.env.NODE_ENV === 'development'
+    }),
     VueDevTools(),
     AutoImport({
       resolvers: [
@@ -37,7 +44,8 @@ export default defineConfig({
         '@vueuse/core',
         '@vueuse/head',
         {
-          axios: [['default', 'axios']]
+          axios: [['default', 'axios']],
+          '@vueuse/integrations/useAxios': ['useAxios']
         }
       ],
       dts: true,

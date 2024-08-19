@@ -1,9 +1,7 @@
-<template>
-  <div class="text-primary">123</div>
-</template>
-
-<script setup>
+<script setup lang="ts">
   defineOptions({
-    name: 'home-page'
+    name: 'HomePage'
   })
 </script>
+
+<template>首页</template>

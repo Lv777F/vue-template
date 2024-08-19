@@ -18,6 +18,6 @@
       "@/*": ["./src/*"]
     },
 
-    "types": ["element-plus/global"]
+    "types": ["element-plus/global", "vite-plugin-vue-layouts/client"]
   }
 }

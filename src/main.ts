@@ -5,6 +5,7 @@ import ElementPlus from 'element-plus'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
 
 import 'dayjs/locale/zh-cn'
+import './axios'
 
 import 'element-plus/theme-chalk/el-var.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
